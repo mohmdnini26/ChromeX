@@ -1,22 +1,71 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+
+# 🌐 ChromeX
+
+**مرورگر اندروید مدرن و پرسرعت — ساختار کاملاً شبیه Google Chrome**
+
+Tabs • Incognito • Bookmarks • History • Downloads • RGB Dancing Light • فارسی/عربی/English
+
 </div>
 
-# Run and deploy your AI Studio app
+---
 
-This contains everything you need to run your app locally.
+## ✨ امکانات (Features)
 
-View your app in AI Studio: https://ai.studio/apps/7348e71e-bc97-4882-8953-390926eba84e
+| امکان | توضیح |
+|---|---|
+| 🗂️ **چند تب** | تب‌های بی‌نهایت با سوئیچر گرافیکی |
+| 🕶️ **حالت ناشناس** | مرور بدون ذخیره تاریخچه |
+| 🔍 **نوار آدرس هوشمند (Omnibox)** | جستجو + آدرس یکجا، چند موتور جستجو |
+| 🔖 **بوکمارک** | ذخیره و مدیریت سایت‌های موردعلاقه |
+| 🕘 **تاریخچه** | کامل با جستجو و پاکسازی |
+| 📥 **دانلودها** | مدیریت فایل‌های دانلودی |
+| 🖥️ **حالت دسکتاپ** | نمایش نسخه کامپیوتر سایت‌ها |
+| 🔎 **Find in Page** | جستجو داخل صفحه |
+| 🌈 **RGB Dancing Light** | چراغ رقص رنگی دورتادور صفحه |
+| 🎨 **تم‌های رنگی** | Aurora، Galaxy، Nature، Neon + 4 والپیپر |
+| 🌍 **سه‌زبانه** | فارسی / عربی / انگلیسی با RTL خودکار |
+| 🧹 **پاک‌سازی داده‌ها** | کش، کوکی، تاریخچه با یک کلیک |
+| 📱 **Jetpack Compose** | UI مدرن Material 3 |
 
-## Run Locally
+## 🖼️ تصاویر
 
-**Prerequisites:**  [Android Studio](https://developer.android.com/studio)
+| Wallpaper Aurora | Wallpaper Galaxy |
+|:---:|:---:|
+| ![Aurora](app/src/main/res/drawable/img_wallpaper_aurora.jpg) | ![Galaxy](app/src/main/res/drawable/img_wallpaper_galaxy.jpg) |
 
+| Wallpaper Nature | Wallpaper Neon |
+|:---:|:---:|
+| ![Nature](app/src/main/res/drawable/img_wallpaper_nature.jpg) | ![Neon](app/src/main/res/drawable/img_wallpaper_neon.jpg) |
 
-1. Open Android Studio
-2. Select **Open** and choose the directory containing this project
-3. Allow Android Studio to fix any incompatibilities as it imports the project.
-4. Create a file named `.env` in the project directory and set `GEMINI_API_KEY` in that file to your Gemini API key (see `.env.example` for an example)
-5. Remove this line from the app's `build.gradle.kts` file: `signingConfig = signingConfigs.getByName("debugConfig")`
-6. Run the app on an emulator or physical device
-7. If you have already published your app in AI Studio, please [request upload key reset](https://support.google.com/googleplay/android-developer/answer/9842756#zippy=%2Crequest-an-upload-key-reset) in Google Play Console.
+## 📲 دانلود APK
+
+به [بخش Releases](https://github.com/mohmdnini26/ChromeX/releases/latest) بروید و آخرین APK را دانلود کنید.
+
+هر push جدید، **خودکار APK جدید** می‌سازد (GitHub Actions).
+
+## 🛠️ بیلد از سورس
+
+```bash
+git clone https://github.com/mohmdnini26/ChromeX.git
+cd ChromeX
+./gradlew assembleDebug
+# خروجی: app/build/outputs/apk/debug/app-debug.apk
+```
+
+## 📁 ساختار پروژه
+
+```
+app/src/main/java/com/example/
+├── MainActivity.kt          # اکتیویتی اصلی
+├── model/                   # مدل‌ها (Tab, SearchEngine, ...)
+├── viewmodel/               # BrowserViewModel (منطق مرورگر)
+├── data/                    # Room database (History, Bookmarks, Downloads)
+├── ui/
+│   ├── components/          # WebView, Omnibox, TabSwitcher, RGB light ...
+│   ├── dialogs/             # Bookmarks, History, Downloads, Settings
+│   └── theme/               # تم‌ها و زبان‌ها
+```
+
+---
+⭐ ساخته‌شده با Compose + Material 3 + WebView
