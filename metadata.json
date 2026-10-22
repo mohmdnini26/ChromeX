@@ -1,0 +1,6 @@
+{
+  "name": "Chrome",
+  "description": "A high-performance modern Android web browser built like Google Chrome, featuring multi-tab switching, incognito mode, omnibox, bookmarks, history, and desktop mode.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
